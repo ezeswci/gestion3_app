@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.prueba"
+        id        = "com.GestionSwci"
         version   = "1.0.0">
 
-    <name>Prueba</name>
+    <name>Gestion Administrativa</name>
 
     <description>
-        Prueba App, sin explicacion por el momento
+        Gestion Administrativa  Facturacion electronica
     </description>
 
     <author href="http://www.swci.com.ar" email="info@swci.com.ar">
