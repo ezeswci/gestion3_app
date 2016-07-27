@@ -8,13 +8,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-	<link type="image/x-icon" href="favicon.ico" rel="icon" />
-	<link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+    <!--
+	<link type="image/x-icon" href="favicon(1).ico" rel="icon" />
+	<link type="image/x-icon" href="favicon(1).ico" rel="shortcut icon" />
+    -->
+    <link type="image/x-icon" href="img/favicon.ico" rel="icon"  />
     <title>Gestion Comercial</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery-maskedinput.min.js"></script>
+		<script src='js/jquery.zoom.min.js'></script>
+		<script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
@@ -23,7 +30,14 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/variables/variablesTest.js"></script>
+    <script src="js/mostrar_alerta.js"></script>
+	<script src="js/validar_usuario.js"></script>
+	<script src="js/ie-emulation-modes-warning.js"></script>
+        <!-- Start Monkey-Dialog JavaScript -->
+        <link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
+        <script src="plugins/dialog-master/js/bootstrap-dialog.js?1"></script>
+		<!-- End Monkey-Dialog JavaScript -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,30 +49,30 @@
   <body>
 
     <div class="container">
-	<!-- #2E907F -->
-      <form class="form-signin">
+	<form class="form-signin">
+    <div id="swciMensaje" style="display:none" onClick="cerrar_alerta()"></div>
 		<h1 class="text-center" >Gestion Comercial</h1>
         <h2 class="form-signin-heading text-center">Datos de Acceso</h2>
-         <label for="empresa" class="sr-only">Empresa</label>
-        <input type="text" id="empresa" class="form-control" placeholder="Empresa" required autofocus>
-       <label for="usuario" class="sr-only">Usuario</label>
-        <input type="text" id="usuario" class="form-control" placeholder="Usuario" required autofocus>
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="Clave" required>
+		<label for="empresa" class="sr-only">Empresa</label>
+        <input type="text" id="empresa" class="form-control" placeholder="Empresa">
+		<label for="usuario" class="sr-only">Usuario</label>
+        <input type="text" id="usuario" class="form-control" placeholder="Usuario">
+        <label for="clave" class="sr-only">Password</label>
+        <input type="password" id="clave" class="form-control" placeholder="Clave">
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="remember-me"> Recordar
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+	</form>
+		<button class="btn btn-lg btn-primary btn-block" onClick="validar_usuario();" >Ingresar</button> 
         <img class="img-responsive center-block" src="img/login.png" alt="Login">
-      </form>
-
     </div> <!-- /container -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+      </body>
+      
 </html>
 
