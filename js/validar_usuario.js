@@ -1,6 +1,9 @@
 function validar_usuario(){
 	//alert('validar usurio');
+<<<<<<< HEAD
 	var www = document.getElementById("web").value;
+=======
+>>>>>>> origin/master
 	var usuario = document.getElementById("usuario").value;
 	var clave = document.getElementById("clave").value;
 	var empresa = document.getElementById("empresa").value;
@@ -26,6 +29,7 @@ function validar_usuario(){
    			 {
     			//value=xmlhttp.responseText;
 				respuesta = JSON.parse(xmlhttp.responseText);
+<<<<<<< HEAD
 				if(respuesta.estado!=0)
 							{setCookie('empresa', empresa, 100);
 							 setCookie('usuario', usuario, 100);
@@ -35,6 +39,12 @@ function validar_usuario(){
 							else{
 							var error = "Intentelo Nuevamente, de persistir verifique su conexi&oacute;n a internet. Si ese no es el inconveniente comunicarse con Sistemas"
 							mostrar_alerta("<h2>Error en la Carga</h2>",error,BootstrapDialog.TYPE_DANGER);
+=======
+				if(respuesta.estado!=0){location.href='menu.html'}
+							else
+							var error = "Intentelo Nuevamente, de persistir verifique su conexi&oacute;n a internet. Si ese no es el inconveniente comunicarse con Sistemas"
+							{mostrar_alerta("<h2>Error en la Carga</h2>",error,BootstrapDialog.TYPE_DANGER);
+>>>>>>> origin/master
 					}
 				
     		  }
@@ -42,7 +52,11 @@ function validar_usuario(){
 			//alert('ruta xxx = '+window.swciRuta);
 			//alert(json);
 			//----------------------
+<<<<<<< HEAD
 			xmlhttp.open("POST",www+"/app_php/validar_usuario.php",true);
+=======
+			xmlhttp.open("POST",window.swciRuta+"gestion3/app_php/validar_usuario.php",true);
+>>>>>>> origin/master
 			xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
 			xmlhttp.withCredentials = "true";
 			xmlhttp.send(json);
