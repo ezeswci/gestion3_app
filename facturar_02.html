@@ -30,13 +30,13 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!-- <script src="js/variables/variablesTest.js"></script> -->
+    <script src="js/variables/variablesTest.js"></script>
     <script src="js/mostrar_alerta.js"></script>
-	<script src="js/validar_usuario.js"></script>
-	<script src="js/ie-emulation-modes-warning.js"></script>
+	<script src="js/leerVariablesFactura.js"></script>
+	<script src="js/leerContactos.js"></script>
+	<script src="js/leerConVenta.js"></script>
 	<script src="js/Cookie_swci.js"></script>
-	<script src="js/leerVariables.js"></script>
-	<script type="text/javascript" src="cordova.js" ></script>
+	<script src="js/ie-emulation-modes-warning.js"></script>
         <!-- Start Monkey-Dialog JavaScript -->
         <link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
         <script src="plugins/dialog-master/js/bootstrap-dialog.js?1"></script>
@@ -49,29 +49,24 @@
     <![endif]-->
   </head>
 
-  <body onLoad="leerVariables()">
-
+  <body onLoad="leerVariablesFactura();leerContactos(1);leerConVenta()">
+	<input type="hidden" name="cliente" id="cliente" value='0' />
+    <input type="hidden" name="tipo_comprobante" id="tipo_comprobante" value="0" />
     <div class="container">
-	<form class="form-signin">
-    <div id="swciMensaje" style="display:none" onClick="cerrar_alerta()"></div>
 		<h1 class="text-center" >Gestion Comercial</h1>
-        <h2 class="form-signin-heading text-center">Datos de Acceso</h2>
-		<label for="empresa" class="sr-only">Direccion Web</label>
-        <input type="text" id="web" class="form-control" placeholder="direccion web o IP">
-		<label for="empresa" class="sr-only">Empresa</label>
-        <input type="text" id="empresa" class="form-control" placeholder="Empresa">
-		<label for="usuario" class="sr-only">Usuario</label>
-        <input type="text" id="usuario" class="form-control" placeholder="Usuario">
-        <label for="clave" class="sr-only">Password</label>
-        <input type="password" id="clave" class="form-control" placeholder="Clave">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Recordar
-          </label>
-        </div>
-	</form>
-		<button class="btn btn-lg btn-primary btn-block" onClick="validar_usuario();" >Ingresar</button> 
-        <img class="img-responsive center-block" src="img/login.png" alt="Login">
+        <div id="desc_comp"><h2 class="form-signin-heading text-center">xxxx</h2></div>
+
+        <h2 class="form-signin-heading text-center">Clientes</h2>
+        <select id="contactos" multiple class="form-control input-lg">
+		</select> 
+        <br/>
+        <h2 class="form-signin-heading text-center">Cond. Venta</h2>
+        <select id="cond_venta" class="form-control input-lg">
+		</select> 
+        <br/>
+		<button class="btn btn-lg btn-primary btn-block" onClick="seleccion_contacto()" >Continuar</button> 
+		<button class="btn btn-lg btn-danger btn-block" onClick="location='facturar.html';" >Volver</button> 
+     <img class="img-responsive center-block" src="img/facturar.png" alt="Login">
     </div> <!-- /container -->
 
 
