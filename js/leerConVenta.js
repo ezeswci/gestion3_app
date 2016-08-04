@@ -45,7 +45,11 @@ xmlhttp.onreadystatechange=function()
 //alert(www+"gestion3/app_php/leerConVenta.php");
 xmlhttp.open("POST",www+"/app_php/leerConVenta.php",true);
 xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+<<<<<<< HEAD
 //xmlhttp.withCredentials = "true";
+=======
+xmlhttp.withCredentials = "true";
+>>>>>>> origin/master
 xmlhttp.send(json);
 }
 

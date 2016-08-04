@@ -46,10 +46,17 @@ function grabarFactura(){
   				if (xmlhttp.readyState==4 && xmlhttp.status==200)
    			 {
     			value=xmlhttp.responseText; // Devuelve el id de la factura generada
+<<<<<<< HEAD
 				//alert('Respuesta = '+value);
 				respuesta = JSON.parse(xmlhttp.responseText);
 				if(respuesta.factura!=0)
 							{
+=======
+				alert(value);
+				respuesta = JSON.parse(xmlhttp.responseText);
+				if(respuesta.factura!=0)
+							{setCookie('factura_id', respuesta.factura, 1);
+>>>>>>> origin/master
 							 location.href='menu.html'
 							}
 							else{
@@ -65,6 +72,10 @@ function grabarFactura(){
 			//----------------------
 			xmlhttp.open("POST",www+"/app_php/grabar_factura.php",true);
 			xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+<<<<<<< HEAD
 			//xmlhttp.withCredentials = "true";
+=======
+			xmlhttp.withCredentials = "true";
+>>>>>>> origin/master
 			xmlhttp.send(json);
 }

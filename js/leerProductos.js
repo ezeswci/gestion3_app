@@ -24,10 +24,18 @@ xmlhttp.onreadystatechange=function()
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
 	var value = xmlhttp.responseText;
+<<<<<<< HEAD
+=======
+	//alert('Respuesta = '+value)
+>>>>>>> origin/master
 	/************************
 	*** Generar el select ***
 	************************/
     var x = document.getElementById("productos");
+<<<<<<< HEAD
+=======
+	//respuesta = JSON.parse(value)
+>>>>>>> origin/master
 	var z = JSON.parse(xmlhttp.responseText);
 	window.productsArray=z;
 	var i = 0;
@@ -41,9 +49,16 @@ xmlhttp.onreadystatechange=function()
 	}
     }
   }
+<<<<<<< HEAD
 xmlhttp.open("POST",www+"/app_php/leerProductos.php",false);
 xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
 //xmlhttp.withCredentials = "true";
+=======
+
+xmlhttp.open("POST",www+"/app_php/leerProductos.php",true);
+xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
+xmlhttp.withCredentials = "true";
+>>>>>>> origin/master
 xmlhttp.send(json);
 }
 
