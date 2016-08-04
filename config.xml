@@ -4,10 +4,10 @@
         id        = "com.Gestion Comercial"
         version   = "1.0.0">
 
-    <name>Prueba</name>
+    <name>Gestion Comercial</name>
 
     <description>
-        Prueba App, sin explicacion por el momento
+        Gesti&oacute;n Comercial - Facturaci&oacute; electr&oacute;nica desde el celular
     </description>
 
     <author href="http://www.swci.com.ar" email="info@swci.com.ar">
