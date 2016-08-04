@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.GestionSwci"
+        id        = "com.prueba"
         version   = "1.0.0">
 
-    <name>Gestion Administrativa</name>
+    <name>Prueba</name>
 
     <description>
-        Gestion Administrativa  Facturacion electronica
+        Prueba App, sin explicacion por el momento
     </description>
 
     <author href="http://www.swci.com.ar" email="info@swci.com.ar">
@@ -16,7 +16,7 @@
 	<preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <preference name='phonegap-version' value='cli-5.2.0' />          <!-- all: current version of PhoneGap -->
+    <preference name='phonegap-version' value='cli-6.3.0' />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
