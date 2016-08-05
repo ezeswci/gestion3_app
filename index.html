@@ -33,42 +33,7 @@
 	<link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
 	<script src="plugins/dialog-master/js/bootstrap-dialog.js?1"></script>
 	<!-- End Monkey-Dialog JavaScript -->
-    <script>
-	// Cuando el usuario toca el input
-	$('input').focus(function() {
-		/* Hace scroll para mostrar el campo.
-	     * Es muy importante usar el método get si estamos trabajando con jQuery
-    	 * ya que con éste obtenemos el elemento del DOM y no el objeto creado
-	     * por el propio jQuery
-    	 */
-		 alert('hola');
-	    $(this).get(0).scrollIntoView();
-		});
-	</script>
-    <script>
-		// Cuando el usuario toca el input
-		$('input').focus(function() {
-	    // Altura del teclado
- 		 alert('hola 1');
-   		var space = Math.ceil($(window).height()*0.4);
 
-	    // Hacemos que el div ocupe lo mismo que el teclado virtual
-    	$('.keyboard-space').height(space);
-
-	    /* Hace scroll para mostrar el campo.
-    	 * Es muy importante usar ".get(0)" si estamos trabajando con jQuery
-	     * ya que con éste obtenemos el elemento del DOM y no el objeto creado
-    	 * por el propio jQuery
-	     */
-	    $(this).get(0).scrollIntoView();
-		});
-
-	// Cuando el input pierde el foco restablecemos el tamaño del div
-	$('input').blur(function hideKeyboardSpace() {
-	    // Hacemos que el div no ocupe espacio
-	    $('.keyboard-space').height(0);
-		});
-	</script>
 	<script type="text/javascript" src="cordova.js" ></script>
   </head>
 
