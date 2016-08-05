@@ -1,0 +1,25 @@
+<form method="post" name="stock" id="stock" class="form" >
+<div class="contenedor texto" align="center" onclick="preguntarId();">
+Selecione un dia
+</div>
+<div class="contenedor" align="center">
+<img src="img/calendario.png" width="50" height="50" onClick="displayCalendar(document.forms[0].fecha,'dd/mm/yyyy',this)"> 
+</div>
+<div class="contenedor fecha" align="center">
+<input type="text" class="fecha" name="fecha" id="fecha" value="" size="6" onChange="muestra(8)" >
+</div>
+<div class="contenedor" align="center">
+<table width="100%">
+	<tr>
+    	<td width="50%" align="center">
+			<input type="button" class="boton_celular" name="volver" id="volver" value="Volver" onclick="location='index.html'"/>
+		</td>
+    	<td width="50%" align="center">
+			<input type="button" class="boton_celular" name="continuar" id="continuar" value="Buscar" onclick="mostrar_dia()"/>
+		</td>    
+	</tr>        
+</table>
+</div>
+</form>  
+<div class="contenedor" id="mostrar_turnos" align="center">
+</div>
