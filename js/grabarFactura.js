@@ -50,7 +50,10 @@ function grabarFactura(){
 				respuesta = JSON.parse(xmlhttp.responseText);
 				if(respuesta.factura!=0)
 							{
-							 location.href='menu.html'
+							 setCookie('factura_id', respuesta.factura, 1);
+							 setCookie('factura_nro', respuesta.numero, 1);
+							 setCookie('factura_total', respuesta.total, 1);
+							 location.href='facturar_04.html'
 							}
 							else{
 							var error = "Intentelo Nuevamente, de persistir verifique su conexi&oacute;n a internet. Si ese no es el inconveniente comunicarse con Sistemas"

@@ -31,13 +31,18 @@ xmlhttp.onreadystatechange=function()
 	var z = JSON.parse(xmlhttp.responseText);
 	window.productsArray=z;
 	var i = 0;
+	var option = document.createElement("option");
+	option.text = 'Seleccione un producto';
+	option.value = 0;
+	x.add(option, x[i]);
+	
 	for(items in z){
 		//alert("Nombre:"+z[items].nombre+"  "+"id:"+z[items].id)
+		i = i + 1;
 		var option = document.createElement("option");
 		option.text = z[items].nombre;
 		option.value = z[items].id;
 		x.add(option, x[i]);
-		i = i + 1;
 	}
     }
   }

@@ -7,11 +7,28 @@ function mostrar_alerta(titulo,texto,tipo){
                 buttons: [{
                    label: 'Aceptar',
                 	action: function(dialogItself){
+						//
                    	 dialogItself.close();
                 	}
                 }]
             });     
 }
+function mostrar_alert_funcion(titulo,texto,tipo,funciones){
+	BootstrapDialog.show({
+                type: tipo,
+                title: titulo,
+                message: texto,
+                buttons: [{
+                   label: 'Aceptar',
+                	action: function(dialogItself){
+						//
+                   	 dialogItself.close();
+                	}
+                }]
+            });
+	
+	}
+
 /*
 var types = [BootstrapDialog.TYPE_DEFAULT, 
 	BootstrapDialog.TYPE_INFO, 
@@ -20,4 +37,3 @@ var types = [BootstrapDialog.TYPE_DEFAULT,
 	BootstrapDialog.TYPE_WARNING, 
 	BootstrapDialog.TYPE_DANGER];
 */
-function prueba(){alert('hola prueba')}

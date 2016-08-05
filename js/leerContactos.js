@@ -34,13 +34,17 @@ xmlhttp.onreadystatechange=function()
 	//respuesta = JSON.parse(value)
 	var z = JSON.parse(xmlhttp.responseText);
 	var i = 0;
+		var option = document.createElement("option");
+		option.text = 'Seleccione un contacto';
+		option.value = '0';
+		x.add(option, x[i]);
 	for(items in z){
 		//alert("Nombre:"+z[items].nombre+"  "+"id:"+z[items].id)
+		i = i + 1;
 		var option = document.createElement("option");
 		option.text = z[items].nombre;
 		option.value = z[items].id;
 		x.add(option, x[i]);
-		i = i + 1;
 	}
     }
   }
@@ -59,8 +63,10 @@ function seleccion_contacto() {
     var a = document.getElementById("cond_venta").selectedIndex; 
     var b = document.getElementById("cond_venta").options; 
 
-    //alert("posicion =  " + y[x].index + " Razon Social = " + y[x].text + " id= " + y[x].value);
-    //alert("venta =  " + b[a].index + " Detalle = " + b[a].text + " id= " + b[a].value);
+	var error = '';
+    if(y[x].value < 1){error = error+"<p>Debe seleccionar un contacto</p>"};
+    if(b[a].value < 1){error = error+"<p>Debe seleccionar una condicion de venta</p>"};
+	if(error.length > 0){mostrar_alerta('Generaci&oacute;n de Comprobante',error,BootstrapDialog.TYPE_DANGER);return}
 
 	setCookie('contacto_id', y[x].value, 1);
 	setCookie('contacto_razon_social', y[x].text, 1);
