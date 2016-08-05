@@ -23,7 +23,7 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet"> 
 
     <script src="js/mostrar_alerta.js"></script>
 	<script src="js/validar_usuario.js"></script>
@@ -41,6 +41,7 @@
     	 * ya que con éste obtenemos el elemento del DOM y no el objeto creado
 	     * por el propio jQuery
     	 */
+		 alert('hola');
 	    $(this).get(0).scrollIntoView();
 		});
 	</script>
@@ -48,7 +49,8 @@
 		// Cuando el usuario toca el input
 		$('input').focus(function() {
 	    // Altura del teclado
-    	var space = Math.ceil($(window).height()*0.4);
+ 		 alert('hola 1');
+   		var space = Math.ceil($(window).height()*0.4);
 
 	    // Hacemos que el div ocupe lo mismo que el teclado virtual
     	$('.keyboard-space').height(space);
@@ -85,16 +87,16 @@
         <input type="text" id="usuario" class="form-control" placeholder="Usuario">
         <label for="clave" class="sr-only">Password</label>
         <input type="password" id="clave" class="form-control" placeholder="Clave">
-        <div class="checkbox">
+ 		<div class="keyboard-space"></div>
+       <div class="checkbox">
         </div>
 	</form>
 		<button class="btn btn-lg btn-primary btn-block" onClick="validar_usuario();" >Ingresar</button> 
         <img class="img-responsive center-block" src="img/login.png" alt="Login">
-		<h5 class="form-signin-heading text-center">&Uacute;ltima revisi&oacute;n 2016-08-05 0854</h5>
+		<h5 class="form-signin-heading text-center">&Uacute;ltima revisi&oacute;n 2016-08-05 0907</h5>
 
     </div> <!-- /container -->
 	
-	<div class="keyboard-space"></div>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
