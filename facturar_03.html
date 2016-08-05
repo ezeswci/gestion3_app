@@ -56,9 +56,6 @@
     <input type="hidden" name="contacto_razon_social" id="contacto_razon_social" value="" />
     <div class="container">
 		<h2 class="text-center" >Gestion Comercial</h2>
-        <div id="desc_comp"><h3 class="form-signin-heading text-center">----</h3></div>
-        <div id="desc_cliente"><h4 class="form-signin-heading text-center">----</h4></div>
-
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#tab_productos">Productos</a></li>
     <li><a data-toggle="tab" href="#tab_detalles" >Detalles</a></li>
@@ -95,8 +92,11 @@
 		</div>
         <br/>
 		<p align="center">
-			<button type="button" class="btn btn-primary" onClick="agregarProducto()">Agregar</button>
+			<button type="button" class="btn btn-primary" onClick="agregarProducto()">Agregar Producto</button>
 		</p>
+        <div style="box-shadow: 0px 2px 25px rgba(0, 0, 0, .25);">
+        <div id="desc_comp"><h4 class="form-signin-heading text-center">----</h4></div>
+        </div>
 	<button class="btn btn-lg btn-danger btn-block" onClick="location='facturar_02.html';" >Volver</button> 
     </div> <!-- Fin tab productos -->
 
