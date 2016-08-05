@@ -1,5 +1,5 @@
 function validar_usuario(){
-	alert('validar usurio');
+	//alert('validar usurio');
 	var www = document.getElementById("web").value;
 	var usuario = document.getElementById("usuario").value;
 	var clave = document.getElementById("clave").value;
