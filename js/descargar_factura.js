@@ -26,8 +26,8 @@ xmlhttp.onreadystatechange=function()
         //alert("valor de la transaccion: "+ value);
 		respuesta = JSON.parse(xmlhttp.responseText);
         //alert("factura: "+ respuesta.factura);
-		//document.location = www+'/facturas/demo/'+respuesta.factura;
-		window.open(www+'/facturas/demo/'+respuesta.factura)
+		document.location = www+'/facturas/demo/'+respuesta.factura;
+		//window.open(www+'/facturas/demo/'+respuesta.factura)
 
     }
   }
