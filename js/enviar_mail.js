@@ -23,7 +23,7 @@ xmlhttp.onreadystatechange=function()
     {
 		value=xmlhttp.responseText;
         window.sessionStorage.setItem("secion", value );
-        alert("valor de la transaccion: "+ value);
+        //alert("valor de la transaccion: "+ value);
 		respuesta = JSON.parse(xmlhttp.responseText);
 		if(respuesta.estado > 0){mostrar_alerta("<h2>Envio de mail</h2>"," Mail enviado",BootstrapDialog.TYPE_SUCCESS);}
 								else

@@ -1,6 +1,6 @@
 // JavaScript Document
-function borrar_variables (){
-	alert('borrar_variables');
+function borrar_variables()
+	{
 	delete_cookie('factura_id');
 	delete_cookie('factura_nro');
 	delete_cookie('factura_total');
