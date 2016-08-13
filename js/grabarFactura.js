@@ -53,6 +53,7 @@ function grabarFactura(){
 							 setCookie('factura_id', respuesta.factura, 1);
 							 setCookie('factura_nro', respuesta.numero, 1);
 							 setCookie('factura_total', respuesta.total, 1);
+							 setCookie('dir_mail', respuesta.dir_mail, 1);
 							 location.href='facturar_04.html'
 							}
 							else{

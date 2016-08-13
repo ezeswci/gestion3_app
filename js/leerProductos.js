@@ -46,7 +46,7 @@ xmlhttp.onreadystatechange=function()
 	}
     }
   }
-xmlhttp.open("POST",www+"/app_php/leerProductos.php",false);
+xmlhttp.open("POST",www+"/app_php/leerProductos.php",true);
 xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
 //xmlhttp.withCredentials = "true";
 xmlhttp.send(json);

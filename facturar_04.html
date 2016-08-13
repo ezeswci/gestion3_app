@@ -34,6 +34,8 @@
 	<script src="js/leerVariablesFactura_04.js"></script>
 	<script src="js/leerProductos.js"></script>
 	<script src="js/solicitar_cae.js"></script>
+	<script src="js/enviar_mail.js"></script>
+	<script src="js/descargar_factura.js"></script>
 	<script src="js/Cookie_swci.js"></script>
 	<script src="js/ie-emulation-modes-warning.js"></script>
 	<!-- Start Monkey-Dialog JavaScript -->
@@ -62,6 +64,14 @@
 
   <div class="tab-content">
         <br/>
+		<p align="center">
+		<label for="mail" class="sr-only">Enviar por mail</label>
+        <input type="text" id="dir_mail" class="form-control" placeholder="Introduzca un direccion de email">
+        </p>
+        <p align="center">
+		<button type="button" class="btn btn-primary" onClick="descargar_factura()">Descargar</button>
+		<button type="button" class="btn btn-primary" onClick="enviar_mail()">Enviar Mail</button>
+		</p>
 		<p align="center">
             <button id="cae" class="btn btn-lg btn-primary btn-block" onClick="solicitar_cae();" >Solicitar C.A.E.</button> 
 		</p>
