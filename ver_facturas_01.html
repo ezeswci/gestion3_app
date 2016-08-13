@@ -31,9 +31,10 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!-- <script src="js/variables/variablesTest.js"></script> -->
     <script src="js/mostrar_alerta.js"></script>
-	<!-- <script src="js/validar_usuario.js"></script> -->
+	<script src="js/leerVariablesMostrar.js"></script>
+	<script src="js/leerComprobantes.js"></script>
+	<script src="js/Cookie_swci.js"></script>
 	<script src="js/ie-emulation-modes-warning.js"></script>
         <!-- Start Monkey-Dialog JavaScript -->
         <link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
@@ -47,20 +48,21 @@
     <![endif]-->
   </head>
 
-  <body>
-
+  <body onLoad="leerVariablesMostrar();leerComprobantes()">
+	<input type="hidden" name="cliente" id="cliente" value='0' />
+    <input type="hidden" name="tipo_comprobante" id="tipo_comprobante" value="0" />
     <div class="container">
 		<h1 class="text-center" >Gestion Comercial</h1>
-        <h2 class="form-signin-heading text-center">Menu Principal</h2>
-		<button class="btn btn-lg btn-primary btn-block" onClick="location='facturar.html';" >Facturar</button> 
- 		<button class="btn btn-lg btn-primary btn-block" onClick="location='ver_facturas.html';" >Ver Facturas</button> 
+        <div id="desc_comp"><h2 class="form-signin-heading text-center"></h2></div>
+        
+	<div id="tab_comprobante"> <!-- Comienzo muestra comprobante -->
+      <!-- <h3>Comprobante</h3> -->
+	</div> <!-- Fin muestra comprobante -->
+
         <br/>
-        <!--
-		<button class="btn btn-lg btn-primary btn-block" onClick="location='clientes.html';" >Clientes</button> 
-   		<button class="btn btn-lg btn-primary btn-block" onClick="location='productos.html';" >Productos</button> 
-        -->
-   		<button class="btn btn-lg btn-danger btn-block" onClick="location='index.html';" >Salir</button> 
-     <img class="img-responsive center-block" src="img/login.png" alt="Login">
+		<!-- <button class="btn btn-lg btn-primary btn-block" onClick="seleccion_contacto()" >Continuar</button>  -->
+		<button class="btn btn-lg btn-danger btn-block" onClick="location='ver_facturas.html';" >Volver</button> 
+     <img class="img-responsive center-block" src="img/facturar.png" alt="Login">
     </div> <!-- /container -->
 
 
