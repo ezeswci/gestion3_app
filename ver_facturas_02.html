@@ -31,8 +31,7 @@
 
     <!-- JavasScript Propios  -->
     <script src="js/mostrar_alerta.js"></script>
-	<script src="js/leerVariablesFactura_04.js"></script>
-	<script src="js/leerProductos.js"></script>
+	<script src="js/leerVariablesMostrar.js"></script>
 	<script src="js/solicitar_cae.js"></script>
 	<script src="js/enviar_mail.js"></script>
 	<script src="js/descargar_factura.js"></script>
@@ -50,19 +49,18 @@
     <![endif]-->
   </head>
 
-  <body onLoad="leerVariablesFactura();">
+  <body onLoad="leerVariablesMostrar();">
 	<input type="hidden" name="cliente" id="cliente" value='0' />
     <input type="hidden" name="tipo_comprobante" id="tipo_comprobante" value="" />
     <input type="hidden" name="contacto_razon_social" id="contacto_razon_social" value="" />
     <div class="container">
 		<h2 class="text-center" >Gestion Comercial</h2>
-        <h2 class="text-center" >Obtener C.A.E.</h2>
         <div id="desc_comp"><h3 class="form-signin-heading text-center">----</h3></div>
         <div id="desc_cliente"><h4 class="form-signin-heading text-center">----</h4></div>
-        <div id="tot_factura"><h4 class="form-signin-heading text-center">----</h4></div>
+        <div id="tot_factura"><h3 class="form-signin-heading text-center">----</h3></div>
 
 
-  <div class="tab-content">
+	<div class="tab-content">
         <br/>
 		<p align="center">
 		<label for="mail" class="sr-only">Enviar por mail</label>
@@ -72,15 +70,13 @@
 		<button type="button" class="btn btn-primary" onClick="descargar_factura()">Descargar</button>
 		<button type="button" class="btn btn-primary" onClick="enviar_mail()">Enviar Mail</button>
 		</p>
-	<div id="pedir_cae">
+        <div id="pedir_cae">
 		<p align="center">
-            <button id="cae" class="btn btn-lg btn-primary btn-block" onClick="solicitar_cae();" >Solicitar C.A.E.</button> 
+            <button id="cae" class="btn btn-lg btn-primary btn-block" ></button> 
 		</p>
+        </div>
+		<button class="btn btn-lg btn-danger btn-block" onClick="location='ver_facturas_01.html';" >Volver</button> 
 	</div>
-	<button class="btn btn-lg btn-danger btn-block" onClick="location='menu.html';" >Volver</button> 
-
-
-</div>
 
 
 
@@ -90,7 +86,6 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-      </body>
-      
+</body>
 </html>
 
