@@ -4,8 +4,8 @@ function leerProductos(tipo)
 var empresa = getCookie('empresa');
 var usuario = getCookie('usuario');
 var www = getCookie('www');
-
-var json=JSON.stringify({"empresa":empresa,"usuario":usuario});
+var contacto_id = getCookie('contacto_id');
+var json=JSON.stringify({"empresa":empresa,"usuario":usuario,"contacto_id":contacto_id});
 
 //alert("Entre leerContactos");
 
@@ -80,20 +80,29 @@ function selectProductById(id){
 function precioTotal(){
 	var cantidad = document.getElementById("cantidad").value; 
 	var precio = document.getElementById("precio_unitario").value; 
-	var total = cantidad * precio;
+	var calculo = cantidad * precio;
+	var total = calculo.toFixed(2);
 	document.getElementById("precio_total").value = total;
 }
 
 function agregarProducto(){
 	var error = '';
+	var producto_unidades = document.getElementById("unidades").value; 
 	var producto_cantidad = document.getElementById("cantidad").value; 
 	var producto_precio = document.getElementById("precio_unitario").value; 
 	var producto_total = document.getElementById("precio_total").value;
 	var producto_nombre = window.productsnombre;
 	var producto_id = window.productsid;
 	
+	var total_factura = getCookie('total_factura');
+	var total_aux = parseFloat(total_factura) + parseFloat(producto_total);
+	var total_factura = total_aux.toFixed(2);
+	setCookie('total_factura', total_factura, 1);
+	document.getElementById('total_factura').innerHTML = "<h4 class='text-center' >Total Factura : $ "+total_factura+"</h4>"
+	
 	if(typeof producto_id == 'undefined'){error = error+"<p>debe seleccionar un <b>Producto</b> de la tabla</p>"};
 	if(producto_cantidad < 0.01 ){error = error+"<p>La <b>Cantidad</b> debe ser mayor a 0 (Cero)</p>"};
+	if(producto_unidades < 0.01 ){error = error+"<p>El <b>Unidades</b> debe ser mayor a 0 (Cero)</p>"};
 	if(producto_precio < 0.01 ){error = error+"<p>El <b>Precio unitario</b> no puede ser 0 (Cero)</p>"};
 	if(error.length > 0){mostrar_alerta('Campos Obligatorios',error,BootstrapDialog.TYPE_DANGER);return}
  	/********************************
@@ -106,18 +115,23 @@ function agregarProducto(){
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
+    var cell6 = row.insertCell(5);
+	
 	cell1.innerHTML = producto_id;
 	cell2.innerHTML = producto_nombre;
-    cell3.innerHTML = producto_cantidad;
-    cell4.innerHTML = producto_precio;
-    cell5.innerHTML = producto_total;
+    cell3.innerHTML = producto_unidades;;
+    cell4.innerHTML = producto_cantidad;
+    cell5.innerHTML = producto_precio;
+    cell6.innerHTML = producto_total;
+	
 	cell1.style.visibility="hidden";
 	cell1.style.fontSize="0%";
 	cell2.style.textAlign="left";
 	cell2.style.fontSize="80%";
 	cell3.style.textAlign="center";
-	cell4.style.textAlign="right";
+	cell4.style.textAlign="center";
 	cell5.style.textAlign="right";
+	cell6.style.textAlign="right";
 	mostrar_alerta('Producto Agregado',producto_cantidad+' '+producto_nombre,BootstrapDialog.TYPE_INFO);
 	
 	document.getElementById("cantidad").value = ''; 

@@ -58,35 +58,41 @@
 		<h2 class="text-center" >Gestion Comercial</h2>
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#tab_productos">Productos</a></li>
-    <li><a data-toggle="tab" href="#tab_detalles" >Detalles</a></li>
+   <!--  <li><a data-toggle="tab" href="#tab_detalles" >Detalles</a></li> -->
     <li><a data-toggle="tab" href="#tab_comprobante" >Ver Comprobante</a></li>
   </ul>
 
   <div class="tab-content">
     <div id="tab_productos" class="tab-pane fade in active"> <!-- Comienzo tab productos -->
       <h3>Productos</h3>
-
+	
         <select id="productos" class="form-control input-lg" onBlur="seleccionarProducto()">
 		</select> 
 		<div class="row">
-			<div class="col-xs-4" align="center">
+			<div class="col-xs-3" align="center">
+				Unidades
+			</div>
+			<div class="col-xs-3" align="center">
 				Cantidad
 			</div>
-			<div class="col-xs-4" align="center">
+			<div class="col-xs-3" align="center">
 				Unitario
 			</div>
-			<div class="col-xs-4" align="center">
+			<div class="col-xs-3" align="center">
 				total
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-4">
+			<div class="col-xs-3">
+				<input id="unidades" type="text" class="form-control" placeholder="Cantidad"  onBlur="precioTotal()">
+			</div>
+			<div class="col-xs-3">
 				<input id="cantidad" type="text" class="form-control" placeholder="Cantidad"  onBlur="precioTotal()">
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-3">
 				<input id="precio_unitario" type="text" class="form-control" placeholder="Pre.Unitario" onBlur="precioTotal()">
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-3">
 				<input id="precio_total" type="text" class="form-control" placeholder="Pre. Total">
 			</div>
 		</div>
@@ -100,7 +106,8 @@
 	<button class="btn btn-lg btn-danger btn-block" onClick="location='facturar_02.html';" >Volver</button> 
     </div> <!-- Fin tab productos -->
 
-    <div id="tab_detalles" class="tab-pane fade"> <!-- Comienzo comprobante con detalle -->
+    <!--
+    <div id="tab_detalles" class="tab-pane fade"> <!-- Comienzo comprobante con detalle 
       <h3>Detalles</h3>
 		<p align="center">
 			<button type="button" class="btn btn-primary" onClick="agregarDetalle()">Agregar</button>
@@ -114,7 +121,8 @@
 				<tr>
 				<th style="visibility: hidden"></th>
                 <th>Producto</th>
-				<th>Cantidad</th>
+				<th>Unid.</th>
+				<th>Cant.</th>
 				<th>P.Unit</th>
 				<th>Total</th>
 				</tr>
@@ -122,6 +130,9 @@
 			<tbody>
 			</tbody>
 		</table> 
+        <div id="total_factura">
+			<h4 class="text-center" >Total Factura : 0.00</h4>
+        </div>
 	<button class="btn btn-lg btn-danger btn-block" onClick="grabarFactura();" >Generar Comprobante</button> 
 	</div> <!-- Fin muestra comprobante -->
 </div>

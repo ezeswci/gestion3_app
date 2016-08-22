@@ -23,11 +23,13 @@ function grabarFactura(){
 		//alert(document.getElementById("muestra_comprobante").rows[i].cells[0].innerHTML);
 		var prod_id = document.getElementById("muestra_comprobante").rows[i].cells[0].innerHTML;
 		var prod_detalle = document.getElementById("muestra_comprobante").rows[i].cells[1].innerHTML;
-		var prod_cant = document.getElementById("muestra_comprobante").rows[i].cells[2].innerHTML;
-		var prod_unit = document.getElementById("muestra_comprobante").rows[i].cells[3].innerHTML;
-		var prod_total = document.getElementById("muestra_comprobante").rows[i].cells[4].innerHTML;
+		var prod_unidad = document.getElementById("muestra_comprobante").rows[i].cells[2].innerHTML;
+		var prod_cant = document.getElementById("muestra_comprobante").rows[i].cells[3].innerHTML;
+		var prod_unit = document.getElementById("muestra_comprobante").rows[i].cells[4].innerHTML;
+		var prod_total = document.getElementById("muestra_comprobante").rows[i].cells[5].innerHTML;
 		//}  
-		productos[i-1] = {"prod_id":prod_id,"prod_detalle":prod_detalle,"prod_cant":prod_cant,"prod_unit":prod_unit,"prod_total":prod_total};
+		//alert("prod_id"+prod_id+"prod_detalle"+prod_detalle+"prod_unidad"+prod_unidad+"prod_cant"+prod_cant+"prod_unit"+prod_unit+"prod_total"+prod_total);
+		productos[i-1] = {"prod_id":prod_id,"prod_detalle":prod_detalle,"prod_unidad":prod_unidad,"prod_cant":prod_cant,"prod_unit":prod_unit,"prod_total":prod_total};
 	}
 
 	var json=JSON.stringify({"cabecera":{"empresa":empresa,"usuario":usuario,"tipo_comprobante":tipo_comprobante,"cliente":id,"cond_venta":cond_venta,},"productos":productos});
