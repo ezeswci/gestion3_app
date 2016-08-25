@@ -1,4 +1,4 @@
-function grabarFactura(){
+function grabarPresupuesto(){
 	//alert('grabarFactura 1');
 	startLoadingAnimation();
 	
@@ -60,7 +60,7 @@ function grabarFactura(){
 							 setCookie('factura_nro', respuesta.numero, 1);
 							 setCookie('factura_total', respuesta.total, 1);
 							 setCookie('dir_mail', respuesta.dir_mail, 1);
-							 location.href='facturar_04.html'
+							 location.href='presupuesto_04.html'
 							}
 							else{
 							var error = "Intentelo Nuevamente, de persistir verifique su conexi&oacute;n a internet. Si ese no es el inconveniente comunicarse con Sistemas"

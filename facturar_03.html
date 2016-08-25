@@ -27,11 +27,13 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
+	<link href="css/loading.css" rel="stylesheet">
+	<link href="css/signin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- <script src="js/variables/variablesTest.js"></script> -->
+    <script src="js/loading.js"></script>
     <script src="js/mostrar_alerta.js"></script>
 	<script src="js/leerVariablesFactura_03.js"></script>
 	<script src="js/leerProductos.js"></script>
@@ -131,9 +133,11 @@
 			</tbody>
 		</table> 
         <div id="total_factura">
-			<h4 class="text-center" >Total Factura : 0.00</h4>
-        </div>
+			<h4 class="text-center" >Total : 0.00</h4>
+	</div>
+    <div id="boton_comprobante">
 	<button class="btn btn-lg btn-danger btn-block" onClick="grabarFactura();" >Generar Comprobante</button> 
+    </div>
 	</div> <!-- Fin muestra comprobante -->
 </div>
 

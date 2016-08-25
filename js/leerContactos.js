@@ -1,15 +1,12 @@
 function leerContactos(tipo)
 {
-
-
+startLoadingAnimation();
 //-----------------------
 var empresa = getCookie('empresa');
 var usuario = getCookie('usuario');
 var www = getCookie('www');
 
 var json=JSON.stringify({"tipo":tipo,"empresa":empresa,"usuario":usuario});
-
-//alert("Entre leerContactos");
 
 var xmlhttp;
 
@@ -31,21 +28,23 @@ xmlhttp.onreadystatechange=function()
 	*** Generar el select ***
 	************************/
     var x = document.getElementById("contactos");
-	//respuesta = JSON.parse(value)
+	//closeLoadingAnimation();
 	var z = JSON.parse(xmlhttp.responseText);
 	var i = 0;
 		var option = document.createElement("option");
 		option.text = 'Seleccione un contacto';
 		option.value = '0';
 		x.add(option, x[i]);
-	for(items in z){
-		//alert("Nombre:"+z[items].nombre+"  "+"id:"+z[items].id)
-		i = i + 1;
-		var option = document.createElement("option");
-		option.text = z[items].nombre;
-		option.value = z[items].id;
-		x.add(option, x[i]);
-	}
+		for(items in z){
+			//alert("Nombre:"+z[items].nombre+"  "+"id:"+z[items].id)
+			i = i + 1;
+			var option = document.createElement("option");
+			option.text = z[items].nombre;
+			option.value = z[items].id;
+			x.add(option, x[i]);
+		}
+		//closeLoadingAnimation();
+
     }
   }
 //alert(www+"gestion3/app_php/leerContactos.php");

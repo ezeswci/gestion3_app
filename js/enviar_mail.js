@@ -1,12 +1,20 @@
-function enviar_mail(factura)
-        {
+function enviar_mail(factura){
+	
+	startLoadingAnimation();
+			
 	var empresa = getCookie('empresa');
 	var usuario = getCookie('usuario');
 	var www = getCookie('www');
 	var factura = getCookie('factura_id');
 	var dir_mail = document.getElementById('dir_mail').value;
+	var tipo_comprobante = getCookie('tipo_comprobante');
 	
-	var json=JSON.stringify({"empresa":empresa,"dir_mail":dir_mail,"factura":factura});
+	if(dir_mail.length < 1){closeLoadingAnimation();
+							mostrar_alerta("<h2>Envio de mail</h2>","Debe ingresr una direccion de mail",BootstrapDialog.TYPE_DANGER);
+							return;
+							}
+	
+	var json=JSON.stringify({"empresa":empresa,"dir_mail":dir_mail,"factura":factura,"tipo_comprobante":tipo_comprobante});
 
 var xmlhttp;
 if (window.XMLHttpRequest)
@@ -24,6 +32,7 @@ xmlhttp.onreadystatechange=function()
 		value=xmlhttp.responseText;
         window.sessionStorage.setItem("secion", value );
         //alert("valor de la transaccion: "+ value);
+		closeLoadingAnimation();
 		respuesta = JSON.parse(xmlhttp.responseText);
 		if(respuesta.estado > 0){mostrar_alerta("<h2>Envio de mail</h2>"," Mail enviado",BootstrapDialog.TYPE_SUCCESS);}
 								else
@@ -31,7 +40,8 @@ xmlhttp.onreadystatechange=function()
     }
   }
 
-
+	
+		//alert(www  +"/app_enviar_mail_factura.php " + json);
 		xmlhttp.open("POST",www+"/app_enviar_mail_factura.php",true);
 		xmlhttp.setRequestHeader("Content-type","application/json;charset=UTF-8");
 		//xmlhttp.withCredentials = "true";

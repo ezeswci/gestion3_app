@@ -35,9 +35,7 @@ xmlhttp.onreadystatechange=function()
 	document.getElementById('desc_cliente').innerHTML = "<h4 class='form-signin-heading text-center'>"+respuesta.nombre+"</h4>"
 	document.getElementById('tot_factura').innerHTML = "<h3 class='form-signin-heading text-center'>Importe Total $ "+respuesta.importe+"</h3>"
 	//alert('CAE '+numero_cae+'  '+numero_cae.length);
-	if(numero_cae.length > 0){var btnCae = '<p align="center"><button id="cae" class="btn btn-lg btn-primary btn-block"> C.A.E. Otorgado = '+numero_cae+'</button></p>'}
-						else
-						 {var btnCae = '<p align="center"><button id="cae" class="btn btn-lg btn-primary btn-block" onClick="solicitar_cae();" >Solicitar C.A.E.</button></p>'}
+	var btnCae = '<p align="center"><button id="cae" class="btn btn-lg btn-primary btn-block" onClick="solicitar_cae();" >&nbsp;</button></p>'
 		document.getElementById("pedir_cae").innerHTML=btnCae;
     }
   }

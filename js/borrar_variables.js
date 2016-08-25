@@ -9,4 +9,6 @@ function borrar_variables()
 	delete_cookie('cond_venta');
 	delete_cookie('contacto_razon_social');
 	delete_cookie('cond_venta_nombre');
+	delete_cookie('cae');
+
 }

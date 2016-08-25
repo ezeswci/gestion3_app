@@ -41,7 +41,8 @@ xmlhttp.onreadystatechange=function()
 		option.text = z[items].nombre;
 		option.value = z[items].id;
 		x.add(option, x[i]);
-	}
+		}
+	closeLoadingAnimation();
     }
   }
 

@@ -1,5 +1,8 @@
-function solicitar_cae(factura)
-        {
+function solicitar_cae(factura){
+
+	startLoadingAnimation();
+
+	
 	var empresa = getCookie('empresa');
 	var usuario = getCookie('usuario');
 	var www = getCookie('www');
@@ -26,6 +29,7 @@ xmlhttp.onreadystatechange=function()
 		value=xmlhttp.responseText;
         window.sessionStorage.setItem("secion", value );
         //alert("valor de la transaccion: "+ value);
+		closeLoadingAnimation();
 		respuesta = JSON.parse(xmlhttp.responseText);
 		if(respuesta.nuevo_numero > 0){var mensaje = "<p>C.A.E. Otorgado = "+respuesta.cae+'</p><p>Factura numero = '+respuesta.nuevo_numero;
 			var estado_transaccion = "C.A.E. Otorgado";
@@ -40,6 +44,7 @@ xmlhttp.onreadystatechange=function()
 			if (tipo_comprobante == 2){var detalle_comprobante = 'Cr&eacute;dito - '+factura_nva}
 			if (tipo_comprobante == 3){var detalle_comprobante = 'D&eacute;bito - '+factura_nva}
 			setCookie('factura_nro', factura_nva, 1);
+			setCookie('cae', respuesta.cae, 1);
 			document.getElementById('desc_comp').innerHTML = "<h3 class='form-signin-heading text-center'>"+detalle_comprobante+"</h3>"
 			var btnCae = '<p align="center"><button id="cae" class="btn btn-lg btn-primary btn-block"> C.A.E. Otorgado = '+respuesta.cae+'</button></p>'
 			document.getElementById("pedir_cae").innerHTML=btnCae;

@@ -1,12 +1,14 @@
-function descargar_factura(factura)
-        {
+function descargar_factura(factura){
+	
+	startLoadingAnimation();
 	var empresa = getCookie('empresa');
 	var usuario = getCookie('usuario');
 	var www = getCookie('www');
 	var factura = getCookie('factura_id');
 	var dir_mail = document.getElementById('dir_mail').value;
+	var tipo_comprobante = getCookie('tipo_comprobante');
 	
-	var json=JSON.stringify({"empresa":empresa,"dir_mail":dir_mail,"factura":factura});
+	var json=JSON.stringify({"empresa":empresa,"dir_mail":dir_mail,"factura":factura,"tipo_comprobante":tipo_comprobante});
 
 var xmlhttp;
 if (window.XMLHttpRequest)
@@ -23,6 +25,7 @@ xmlhttp.onreadystatechange=function()
     {
 		value=xmlhttp.responseText;
         window.sessionStorage.setItem("secion", value );
+		closeLoadingAnimation();
         //alert("valor de la transaccion: "+ value);
 		respuesta = JSON.parse(xmlhttp.responseText);
         //alert("factura: "+ respuesta.factura);

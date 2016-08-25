@@ -1,6 +1,6 @@
 function leerProductos(tipo)
 {
-
+startLoadingAnimation();
 var empresa = getCookie('empresa');
 var usuario = getCookie('usuario');
 var www = getCookie('www');
@@ -44,6 +44,7 @@ xmlhttp.onreadystatechange=function()
 		option.value = z[items].id;
 		x.add(option, x[i]);
 	}
+	closeLoadingAnimation();
     }
   }
 xmlhttp.open("POST",www+"/app_php/leerProductos.php",true);
@@ -72,7 +73,8 @@ function selectProductById(id){
 		if(z[items].id==id)
 		return z[items].precio;
 	}
-	alert("Error");
+	//alert("Error 75");
+	mostrar_alerta('Productos','Debe seleccionar un producto',BootstrapDialog.TYPE_DANGER);
 	return null;
 }
 
@@ -98,7 +100,7 @@ function agregarProducto(){
 	var total_aux = parseFloat(total_factura) + parseFloat(producto_total);
 	var total_factura = total_aux.toFixed(2);
 	setCookie('total_factura', total_factura, 1);
-	document.getElementById('total_factura').innerHTML = "<h4 class='text-center' >Total Factura : $ "+total_factura+"</h4>"
+	document.getElementById('total_factura').innerHTML = "<h4 class='text-center' >Total : $ "+total_factura+"</h4>"
 	
 	if(typeof producto_id == 'undefined'){error = error+"<p>debe seleccionar un <b>Producto</b> de la tabla</p>"};
 	if(producto_cantidad < 0.01 ){error = error+"<p>La <b>Cantidad</b> debe ser mayor a 0 (Cero)</p>"};

@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+/* Loading PopUp */
+.loading-pop-up{
+background: -moz-linear-gradient(left, rgba(161,162,164,0) 0%, rgba(161,162,164,0.5) 51%, rgba(161,162,164,0) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(161,162,164,0)), color-stop(51%, rgba(161,162,164,0.5)), color-stop(100%, rgba(161,162,164,0)));
+background: -webkit-linear-gradient(left, rgba(161,162,164,0) 0%, rgba(161,162,164,0.5) 51%, rgba(161,162,164,0) 100%);
+background: -o-linear-gradient(left, rgba(161,162,164,0) 0%, rgba(161,162,164,0.5) 51%, rgba(161,162,164,0) 100%);
+background: -ms-linear-gradient(left, rgba(161,162,164,0) 0%, rgba(161,162,164,0.5) 51%, rgba(161,162,164,0) 100%);
+background: linear-gradient(to right, rgba(161,162,164,0) 0%, rgba(161,162,164,0.5) 51%, rgba(161,162,164,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1a2a4', endColorstr='#a1a2a4', GradientType=1 );
+display: table;
+width:100%;
+height:100%;
+min-height:100vh;
+}
+.loading-pop-up .modal-dialog{
+	display: table-cell;
+    vertical-align: middle;
+	border:none;	
+}
+.loading-pop-up .modal-content{
+	background-color: transparent;
+	background:url(../img/pop-ups/loading.gif) no-repeat;
+	background-size:contain;
+	background-position:center center;
+	width::295px;
+	height:295px;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	border:none;
+	-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0);
+opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.loading-pop-up .modal-dialog .modal-content .modal-header, .loading-pop-up .modal-content .modal-footer, .loading-pop-up .btn-default {
+	display:none;
+	border:none;
+}

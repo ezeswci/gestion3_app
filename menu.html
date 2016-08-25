@@ -33,12 +33,14 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- <script src="js/variables/variablesTest.js"></script> -->
     <script src="js/mostrar_alerta.js"></script>
-	<!-- <script src="js/validar_usuario.js"></script> -->
+	<script src="js/tipoComprobante.js"></script>
+	<script src="js/Cookie_swci.js"></script>
+
 	<script src="js/ie-emulation-modes-warning.js"></script>
-        <!-- Start Monkey-Dialog JavaScript -->
-        <link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
-        <script src="plugins/dialog-master/js/bootstrap-dialog.js?1"></script>
-		<!-- End Monkey-Dialog JavaScript -->
+	<!-- Start Monkey-Dialog JavaScript -->
+	<link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
+	<script src="plugins/dialog-master/js/bootstrap-dialog.js?1"></script>
+	<!-- End Monkey-Dialog JavaScript -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -55,8 +57,8 @@
 		<button class="btn btn-lg btn-primary btn-block" onClick="location='facturar.html';" >Facturar</button> 
  		<button class="btn btn-lg btn-primary btn-block" onClick="location='ver_facturas.html';" >Ver Facturas</button> 
         <br/>
-		<button class="btn btn-lg btn-primary btn-block" onClick="location='clientes.html';" >Presupuestos</button> 
-   		<button class="btn btn-lg btn-primary btn-block" onClick="location='productos.html';" >Ver Presupuestos</button> 
+		<button class="btn btn-lg btn-primary btn-block" onClick="tipoComprobante(11);" >Presupuestos</button> 
+   		<button class="btn btn-lg btn-primary btn-block" onClick="location='ver_presupuestos.html';" >Ver Presupuestos</button> 
 		<br/>
   		<button class="btn btn-lg btn-danger btn-block" onClick="location='index.html';" >Salir</button> 
      <img class="img-responsive center-block" src="img/login.png" alt="Login">

@@ -29,22 +29,17 @@
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
 
-    <!-- JavasScript Propios  -->
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/mostrar_alerta.js"></script>
 	<script src="js/leerVariablesMostrar.js"></script>
-	<script src="js/solicitar_cae.js"></script>
-	<script src="js/enviar_mail.js"></script>
-	<script src="js/descargar_factura.js"></script>
+	<script src="js/leerPresupuestos.js"></script>
 	<script src="js/Cookie_swci.js"></script>
 	<script src="js/ie-emulation-modes-warning.js"></script>
-	<!-- Start Monkey-Dialog JavaScript -->
-	<link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
-	<script src="plugins/dialog-master/js/bootstrap-dialog.js?1"></script>
-	<!-- End Monkey-Dialog JavaScript -->
-	<!-- Start loading JavaScript -->
-	<link href="css/loading.css" rel="stylesheet">
-    <script src="js/loading.js"></script>
-	<!-- End loading JavaScript -->
+        <!-- Start Monkey-Dialog JavaScript -->
+        <link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
+        <script src="plugins/dialog-master/js/bootstrap-dialog.js?1"></script>
+		<!-- End Monkey-Dialog JavaScript -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -53,43 +48,27 @@
     <![endif]-->
   </head>
 
-  <body onLoad="leerVariablesMostrar();">
+  <body onLoad="leerPresupuestos()">
 	<input type="hidden" name="cliente" id="cliente" value='0' />
-    <input type="hidden" name="tipo_comprobante" id="tipo_comprobante" value="" />
-    <input type="hidden" name="contacto_razon_social" id="contacto_razon_social" value="" />
+    <input type="hidden" name="tipo_comprobante" id="tipo_comprobante" value="0" />
     <div class="container">
-		<h2 class="text-center" >Gestion Comercial</h2>
-        <div id="desc_comp"><h3 class="form-signin-heading text-center">----</h3></div>
-        <div id="desc_cliente"><h4 class="form-signin-heading text-center">----</h4></div>
-        <div id="tot_factura"><h3 class="form-signin-heading text-center">----</h3></div>
+		<h1 class="text-center" >Gestion Comercial</h1>
+        <div id="desc_comp"><h3 class="form-signin-heading text-center"></h3></div>
+        
+	<div id="tab_comprobante"> <!-- Comienzo muestra comprobante -->
+      <!-- <h3>Comprobante</h3> -->
+	</div> <!-- Fin muestra comprobante -->
 
-
-	<div class="tab-content">
         <br/>
-		<p align="center">
-		<label for="mail" class="sr-only">Enviar por mail</label>
-        <input type="text" id="dir_mail" class="form-control" placeholder="Introduzca un direccion de email">
-        </p>
-        <p align="center">
-		<button type="button" class="btn btn-primary" onClick="descargar_factura()">Descargar</button>
-		<button type="button" class="btn btn-primary" onClick="enviar_mail()">Enviar Mail</button>
-		</p>
-        <div id="pedir_cae">
-		<p align="center">
-            <button id="cae" class="btn btn-lg btn-primary btn-block" ></button> 
-		</p>
-        </div>
-		<button class="btn btn-lg btn-danger btn-block" onClick="location='ver_facturas_01.html';" >Volver</button> 
-	</div>
-
-
-
+		<!-- <button class="btn btn-lg btn-primary btn-block" onClick="seleccion_contacto()" >Continuar</button>  -->
+		<button class="btn btn-lg btn-danger btn-block" onClick="location='ver_presupuestos.html';" >Volver</button> 
      <img class="img-responsive center-block" src="img/facturar.png" alt="Login">
     </div> <!-- /container -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-</body>
+      </body>
+      
 </html>
 
