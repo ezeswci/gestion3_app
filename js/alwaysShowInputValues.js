@@ -1,4 +1,3 @@
-// JavaScript Document
 function alwaysShowInputValues(){
 	$('input').focus(function() {
 	$(".modal-dialog").css( "-ms-transform", "translate(0, -170px)" );
