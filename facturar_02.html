@@ -58,10 +58,18 @@
     <div class="container">
 		<h1 class="text-center" >Gestion Comercial</h1>
         <div id="desc_comp"><h2 class="form-signin-heading text-center"></h2></div>
-
-        <h2 class="form-signin-heading text-center">Clientes</h2>
-        <select id="contactos"  class="form-control input-lg">
-		</select> 
+		<div class="row">
+			<div class="col-xs-6">
+			<h2 class="form-signin-heading text-center">Clientes</h2>
+			</div>
+			<div class="col-xs-6">
+            <h2 class="form-signin-heading">
+			<input id="co_id" type="text" class="form-control" placeholder="C&oacute;digo"  onBlur="contacto_codigo()">
+            </h2>
+			</div>
+		</div>        
+        	<select id="contactos"  class="form-control input-lg"></select> 
+       
         <br/>
         <h2 class="form-signin-heading text-center">Cond. Venta</h2>
         <select id="cond_venta" class="form-control input-lg">

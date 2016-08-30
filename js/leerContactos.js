@@ -74,3 +74,9 @@ function seleccion_contacto() {
 	location.href='facturar_03.html'
 
 }
+
+// Guardar el seleccionado
+function contacto_codigo() {
+		document.getElementById("contactos").value = document.getElementById("co_id").value;
+		document.getElementById("cond_venta").focus();
+}

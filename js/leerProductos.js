@@ -134,9 +134,18 @@ function agregarProducto(){
 	cell4.style.textAlign="center";
 	cell5.style.textAlign="right";
 	cell6.style.textAlign="right";
-	mostrar_alerta('Producto Agregado',producto_cantidad+' '+producto_nombre,BootstrapDialog.TYPE_INFO);
+	mostrar_alerta('Producto Agregado',producto_id+' '+producto_nombre,BootstrapDialog.TYPE_INFO);
 	
+	document.getElementById("pr_txtcod").value = ''; 
+	document.getElementById("unidades").value = ''; 
 	document.getElementById("cantidad").value = ''; 
 	document.getElementById("precio_unitario").value = '';
 	document.getElementById("precio_total").value = '';
+	document.getElementById("productos").value = '0';
+}
+
+function producto_codigo() {
+	document.getElementById("productos").value = document.getElementById("pr_txtcod").value;
+	seleccionarProducto();
+	document.getElementById("unidades").focus();
 }

@@ -67,6 +67,16 @@
   <div class="tab-content">
     <div id="tab_productos" class="tab-pane fade in active"> <!-- Comienzo tab productos -->
       <h3>Productos</h3>
+		<div class="row">
+			<div class="col-xs-6">
+			<h2 class="form-signin-heading text-center">Productos</h2>
+			</div>
+			<div class="col-xs-6">
+            <h2 class="form-signin-heading">
+			<input id="pr_txtcod" type="text" class="form-control" placeholder="C&oacute;digo"  onBlur="producto_codigo()">
+            </h2>
+			</div>
+		</div>        
 	
         <select id="productos" class="form-control input-lg" onBlur="seleccionarProducto()">
 		</select> 
