@@ -37,7 +37,8 @@
     <script src="js/mostrar_alerta.js"></script>
 	<script src="js/leerVariablesFactura.js"></script>
 	<script src="js/leerContactos.js"></script>
-	<script src="js/leerConVenta.js"></script>
+	<script src="js/enter2tab.js"></script>
+	<!-- <script src="js/leerConVenta.js"></script> -->
 	<script src="js/Cookie_swci.js"></script>
 	<script src="js/ie-emulation-modes-warning.js"></script>
         <!-- Start Monkey-Dialog JavaScript -->
@@ -52,7 +53,7 @@
     <![endif]-->
   </head>
 
-  <body onLoad="leerVariablesFactura();leerContactos(1);leerConVenta()">
+  <body onLoad="leerVariablesFactura();leerContactos(1)">
 	<input type="hidden" name="cliente" id="cliente" value='0' />
     <input type="hidden" name="tipo_comprobante" id="tipo_comprobante" value="0" />
     <div class="container">
@@ -64,17 +65,18 @@
 			</div>
 			<div class="col-xs-6">
             <h2 class="form-signin-heading">
-			<input id="co_id" type="text" class="form-control" placeholder="C&oacute;digo"  onBlur="contacto_codigo()">
+			<input id="co_id" type="text" class="form-control" placeholder="C&oacute;digo"  onKeyPress="enter2tab(event,'contactos')" onBlur="contacto_codigo()">
             </h2>
 			</div>
 		</div>        
         	<select id="contactos"  class="form-control input-lg"></select> 
-       
         <br/>
+        <!--
         <h2 class="form-signin-heading text-center">Cond. Venta</h2>
         <select id="cond_venta" class="form-control input-lg">
 		</select> 
         <br/>
+        -->
 		<button class="btn btn-lg btn-primary btn-block" onClick="seleccion_contacto()" >Continuar</button> 
 		<button class="btn btn-lg btn-danger btn-block" onClick="location='facturar.html';" >Volver</button> 
      <img class="img-responsive center-block" src="img/facturar.png" alt="Login">

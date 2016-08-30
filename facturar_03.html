@@ -39,6 +39,7 @@
 	<script src="js/leerProductos.js"></script>
 	<script src="js/grabarFactura.js"></script>
 	<script src="js/Cookie_swci.js"></script>
+	<script src="js/enter2tab.js"></script>
 	<script src="js/ie-emulation-modes-warning.js"></script>
         <!-- Start Monkey-Dialog JavaScript -->
         <link href="plugins/dialog-master/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
@@ -72,7 +73,7 @@
 			</div>
 			<div class="col-xs-6">
             <h2 class="form-signin-heading">
-			<input id="pr_txtcod" type="text" class="form-control" placeholder="C&oacute;digo"  onBlur="producto_codigo()">
+			<input id="pr_txtcod" type="text" class="form-control" placeholder="C&oacute;digo"  onKeyPress="enter2tab(event,'unidades')" onBlur="producto_codigo()">
             </h2>
 			</div>
 		</div>        

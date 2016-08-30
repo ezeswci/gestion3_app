@@ -43,7 +43,8 @@ xmlhttp.onreadystatechange=function()
 			option.value = z[items].id;
 			x.add(option, x[i]);
 		}
-		//closeLoadingAnimation();
+		closeLoadingAnimation();
+
 
     }
   }
@@ -59,18 +60,18 @@ function seleccion_contacto() {
     var x = document.getElementById("contactos").selectedIndex; 
     var y = document.getElementById("contactos").options; 
 
-    var a = document.getElementById("cond_venta").selectedIndex; 
-    var b = document.getElementById("cond_venta").options; 
+    //var a = document.getElementById("cond_venta").selectedIndex; 
+   // var b = document.getElementById("cond_venta").options; 
 
 	var error = '';
     if(y[x].value < 1){error = error+"<p>Debe seleccionar un contacto</p>"};
-    if(b[a].value < 1){error = error+"<p>Debe seleccionar una condicion de venta</p>"};
+    //if(b[a].value < 1){error = error+"<p>Debe seleccionar una condicion de venta</p>"};
 	if(error.length > 0){mostrar_alerta('Generaci&oacute;n de Comprobante',error,BootstrapDialog.TYPE_DANGER);return}
 
 	setCookie('contacto_id', y[x].value, 1);
 	setCookie('contacto_razon_social', y[x].text, 1);
-	setCookie('cond_venta', b[a].value, 1);
-	setCookie('cond_venta_nombre', b[a].text, 1);
+	//setCookie('cond_venta', b[a].value, 1);
+	//setCookie('cond_venta_nombre', b[a].text, 1);
 	location.href='facturar_03.html'
 
 }
