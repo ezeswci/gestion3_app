@@ -79,5 +79,11 @@ function seleccion_contacto() {
 // Guardar el seleccionado
 function contacto_codigo() {
 		document.getElementById("contactos").value = document.getElementById("co_id").value;
-		document.getElementById("cond_venta").focus();
+		if(document.getElementById("co_id").value == 0) {document.getElementById("contactos").focus();}
+;
+}
+
+function contactos_mostrar_codigo() {
+		document.getElementById("co_id").value = document.getElementById("contactos").value;
+		//document.getElementById("cond_venta").focus();
 }
