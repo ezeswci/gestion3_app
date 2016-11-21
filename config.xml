@@ -40,20 +40,20 @@
     	<param name="ios-package" value="CDVSound" />
 	</feature>
  <!-- Core plugins -->
-    <gap:plugin name="org.apache.cordova.battery-status" source="npm"  />
+    <!--<gap:plugin name="org.apache.cordova.battery-status" source="npm"  />
     <!--<gap:plugin name="org.apache.cordova.camera" /> -->
-    <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
+    <!--<gap:plugin name="org.apache.cordova.media-capture" source="npm" />
     <!--<gap:plugin name="org.apache.cordova.console" />
     <gap:plugin name="org.apache.cordova.contacts" /> -->
     <gap:plugin name="cordova-plugin-device" source="npm"  />
-    <gap:plugin name="org.apache.cordova.device-motion" source="npm"  />
+    <!-- <gap:plugin name="org.apache.cordova.device-motion" source="npm"  />
     <!--<gap:plugin name="org.apache.cordova.device-orientation" />
     <gap:plugin name="org.apache.cordova.dialogs" /> -->
-    <gap:plugin name="org.apache.cordova.file" source="npm" />
+    <!-- <gap:plugin name="org.apache.cordova.file" source="npm" />
     <gap:plugin name="org.apache.cordova.file-transfer" source="npm" />
     <!--<gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" /> -->
-    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+    <!-- <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
     <gap:plugin name="org.apache.cordova.media" source="npm" />
 	<gap:plugin name="cordova-plugin-network-information" source="npm"  />
     <!--<gap:plugin name="org.apache.cordova.network-information" />
@@ -65,21 +65,21 @@
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" /> -->
 	<gap:plugin name="nl.x-services.plugins.calendar" source="npm" />
-	<gap:plugin name="de.appplant.cordova.plugin.email-composer" source="npm" />
+	<gap:plugin name="cordova-plugin-email-composer" source="npm" />
 	<gap:plugin name="com.inazar.datepicker" source="npm" />
-	<gap:plugin name="de.cameonet.cordova.contacts" source="npm"  />
+	<!-- <gap:plugin name="de.cameonet.cordova.contacts" source="npm"  /> 
 	<gap:plugin name="com.cordova.plugins.sms" source="npm" />
-	<gap:plugin name="nl.x-services.plugins.socialsharing" source="npm"  />
+	<gap:plugin name="nl.x-services.plugins.socialsharing" source="npm"  /> -->
     <!--<gap:plugin name="com.plugin.datepicker" version="0.3.2" />
 	 End Third party plugins -->
 	<!-- Calendar plug in extenciones -->
 	<!-- for iOS -->
 	<!-- Calendar plug in extenciones -->
 	<!-- GeoLocation platform. -->	
-	<gap:plugin name="org.transistorsoft.cordova.background-geolocation" source="npm"  />
+	<!-- <gap:plugin name="org.transistorsoft.cordova.background-geolocation" source="npm"  />
 	<gap:plugin name="com.joandilee.imeiplugin" source="npm"  />
 	<gap:plugin name="it.witek.cordova.plugin.background-mode" source="npm"  />
-	<gap:plugin name="com.badrit.backbutton" source="npm"  />
+	<gap:plugin name="com.badrit.backbutton" source="npm"  /> -->
 	<gap:plugin name="cordova-plugin-network-information" source="npm"  />
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />	<!-- GeoLocation platform. -->
 	
