@@ -99,6 +99,8 @@ var xmlhttp;
 							}
 							else{
 							var error = "Intentelo Nuevamente, de persistir verifique su conexi&oacute;n a internet. Si ese no es el inconveniente comunicarse con Sistemas"
+							if(respuesta.numero == -99){var error = "El saldo del cliente excede el l&iacute;mite permitido."}
+							
 							mostrar_alerta("<h2>Comprobante no Generado</h2>",error,BootstrapDialog.TYPE_DANGER);
 					}
 				
