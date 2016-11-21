@@ -40,6 +40,7 @@ function grabarFactura(){
 	var empresa = getCookie('empresa');
 	var usuario = getCookie('usuario');
 	var www = getCookie('www');
+	var total_factura = getCookie('total_factura');
 
 
 	//--------------------------
@@ -66,7 +67,7 @@ function grabarFactura(){
 		productos[i-1] = {"prod_id":prod_id,"prod_detalle":prod_detalle,"prod_unidad":prod_unidad,"prod_cant":prod_cant,"prod_unit":prod_unit,"prod_total":prod_total};
 	}
 
-	var json=JSON.stringify({"cabecera":{"empresa":empresa,"usuario":usuario,"tipo_comprobante":tipo_comprobante,"cliente":id,"cond_venta":cond_venta,},"productos":productos});
+	var json=JSON.stringify({"cabecera":{"empresa":empresa,"usuario":usuario,"tipo_comprobante":tipo_comprobante,"cliente":id,"cond_venta":cond_venta,"total":total_factura,},"productos":productos});
 
 //mostrar_alerta('Grabar comprobante','mensaje de fin de factura',BootstrapDialog.TYPE_INFO);
 
@@ -99,7 +100,7 @@ var xmlhttp;
 							}
 							else{
 							var error = "Intentelo Nuevamente, de persistir verifique su conexi&oacute;n a internet. Si ese no es el inconveniente comunicarse con Sistemas"
-							if(respuesta.numero == -99){var error = "El saldo del cliente excede el l&iacute;mite permitido."}
+							if(respuesta.numero == -99){var error = "<p>El saldo del cliente excede el l&iacute;mite permitido.</p><p>Saldo Actual : "+respuesta.total+"</p><p>Limite de cr&eacute;dito = "+respuesta.dir_mail+"</p>"}
 							
 							mostrar_alerta("<h2>Comprobante no Generado</h2>",error,BootstrapDialog.TYPE_DANGER);
 					}
