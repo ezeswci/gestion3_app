@@ -34,7 +34,6 @@
     <gap:plugin name="cordova-plugin-device" source="npm"  />
 	<gap:plugin name="nl.x-services.plugins.calendar" source="npm" />
 	<gap:plugin name="cordova-plugin-email-composer" source="npm" />
-	<gap:plugin name="com.inazar.datepicker" source="npm" />
 	<gap:plugin name="cordova-plugin-network-information" source="npm"  />
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />	<!-- GeoLocation platform. -->
 	
